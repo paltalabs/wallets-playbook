@@ -7,9 +7,9 @@ sidebar_position: 4
 
 ## Introduction
 
-DeFindex is a yield aggregation protocol built on Stellar/Soroban that simplifies DeFi access for wallets and their users. The protocol enables the creation of tokenized vaults that automatically distribute user funds across multiple yield-generating strategies, handling the complexity of yield optimization behind the scenes.
+DeFindex is a vault and yield aggregation protocol built on Stellar/Soroban that simplifies DeFi access for wallets and their users. The protocol enables the creation of tokenized vaults that automatically distribute user funds across multiple yield-generating strategies, handling the complexity of yield optimization behind the scenes.
 
-With DeFindex, vault managers can rebalance positions, auto-compound earnings, and optimize returns without requiring additional user signatures. This makes it ideal for wallets looking to offer yield-generating accounts without building deep DeFi expertise in-house.
+With DeFindex, vault managers can rebalance positions, protect user funds, and optimize returns without requiring additional user signatures. This makes it ideal for asset managers or wallets looking to offer yield-generating accounts without building deep DeFi expertise in-house.
 
 - [🌐 DeFindex Website](https://defindex.io)
 - [📖 DeFindex Documentation](https://docs.defindex.io)
@@ -35,20 +35,24 @@ Integrating DeFindex brings several strategic benefits to wallet providers:
 
    📖 [Wallet Developer Documentation](https://docs.defindex.io/api-integration-guide/api)
 
-2. **Define Your Revenue Model:**
-   Decide how to monetize the integration. You can pass 100% of yields to users or configure fee-sharing arrangements where your wallet earns a percentage of generated yields.
+2. **Select the strategies for your users:**
+   - Choose assets with the highest adoption potential among your target audience.
+   - Select pools and protocols to build the ideal vault for your users.
 
-3. **Design the User Experience:**
+3. **Define Revenue Model:**
+   - Consider a fee configuration that is sustainable for you while remaining attractive to your users.
+   - The default vault configuration splits yields 50/50 between user earnings and fees collected by the vault manager.
+
+4. **Design the User Experience:**
    Keep the interface simple for users. Consider showing:
    - Current vault balance and deposited amount
    - Current APY and historical performance
-   - Underlying strategies and risk information
+   - Underlying strategies
 
    DeFindex provides APIs to fetch real-time yield data and vault performance metrics.
 
-4. **Technical Integration:**
-   - Classic Stellar wallets (G addresses) can interact with DeFindex vaults
+5. **Technical Integration:**
+   - Classic Stellar wallets and Smart wallets (G & C addresses) can interact with DeFindex vaults
    - If using Horizon, you'll need an [RPC endpoint](https://developers.stellar.org/docs/data/apis/rpc) for Soroban transactions
-   - Vault shares are tokenized, making balance tracking straightforward
 
    📖 [Technical Integration Guide](https://docs.defindex.io/api-integration-guide/api)
